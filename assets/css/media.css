@@ -1,0 +1,354 @@
+/* ==================================================
+                RESPONSIVE STYLES
+   Order: Desktop → Tablet → Mobile → Small Mobile
+   ================================================== */
+
+
+/* ==================================================
+   LARGE SCREENS (≥ 992px) – Desktops & Large Laptops
+   ================================================== */
+
+@media (min-width: 992px) {
+
+    /* Navbar */
+    .navbar {
+        padding: 1rem 0;
+    }
+
+    /* Logo */
+    .logo-img {
+        height: 70px;
+    }
+
+    /* Footer spacing */
+    .footer-brand {
+        padding-right: 3rem;
+    }
+
+    .destinations-hero,
+    .gallery-header,
+    .about-hero,
+    .contact-hero {
+        min-height: 80vh;
+    }
+
+    .auth-card {
+        padding: 3rem;
+    }
+    
+}
+
+
+/* ==================================================
+   TABLETS & SMALL LAPTOPS (768px – 991px)
+   ================================================== */
+   
+@media (min-width: 768px) and (max-width: 991px) {
+
+    /* Logo */
+    .logo-img {
+        height: 60px;
+    }
+
+    /* Typography */
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    /* Hero */
+    .hero-section {
+        min-height: 90vh;
+        padding: 3rem 1.5rem;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .hero-overlay {
+        background: rgba(11, 30, 45, 0.65);
+    }
+
+    /* Section headers */
+    .featured-destinations .section-header h2 {
+        font-size: 2rem;
+    }
+
+    /* Testimonials */
+    .testimonial-card {
+        padding: 1.6rem 1.4rem;
+    }
+
+    .testimonial-text {
+        font-size: 0.9rem;
+    }
+
+    /* Gallery Page */
+    .gallery-grid {
+        column-count: 2;
+    }
+
+    .gallery-header h1 {
+        font-size: 2rem;
+    }
+
+    .hero-glass {
+        max-width: 80%;
+    }
+}
+
+
+/* ==================================================
+   MOBILE & TABLETS (≤ 991px) – Navbar Behavior
+   ================================================== */
+
+@media (max-width: 991px) {
+
+    /* Navbar links stacking */
+    .navbar-nav .nav-item {
+        margin-left: 0;
+        margin-bottom: 0.4rem;
+    }
+
+    /* Remove underline animation */
+    .navbar .nav-link::after {
+        display: none;
+    }
+
+    /* Button-like links */
+    .navbar .nav-link {
+        padding: 0.65rem 1rem;
+        border-radius: 6px;
+    }
+
+    .navbar .nav-link:hover,
+    .navbar .nav-link.active {
+        background-color: rgba(30, 115, 190, 0.2);
+        color: var(--secondary-turquoise);
+    }
+
+    .navbar-collapse {
+        background-color: #ffffff;
+        padding: 1rem;
+        border-radius: 8px;
+    }
+
+    .custom-navbar .nav-link {
+        color: var(--primary-blue);
+    }
+
+    .gallery-header .container  {
+        max-width: 80%;
+    }
+}
+
+
+/* ==================================================
+   MOBILE PHONES (≤ 576px)
+   ================================================== */
+
+@media (max-width: 576px) {
+
+    /* Hero */
+    .hero-section {
+        max-height: auto;
+        padding: 1rem;
+    }
+
+    .hero-content {
+        padding: 1.5rem;
+        max-width: 80%;
+    }
+
+    .hero-content h1 {
+        font-size: 1.7rem;
+    }
+
+
+    .hero-content .btn {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        padding: 0.65rem 1.2rem;
+        white-space: nowrap;
+    }
+
+    /* Section headers */
+    .section-header {
+        padding: 0 1rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.75rem;
+    }
+
+    .section-header p {
+        font-size: 0.8rem;
+    }
+
+    /* Destinations */
+    .featured-destinations .section-header {
+        margin-bottom: 2.5rem;
+    }
+
+    .destination-card .card-img-top {
+        height: 200px;
+    }
+
+    .destination-card .card-title {
+        font-size: 1.15rem;
+    }
+
+    .destination-card .card-text {
+        font-size: 0.9rem;
+    }
+
+    .hero-content p{
+        font-size: 0.7rem;
+    }
+    /* Why Us cards */
+    .why-card {
+        padding: 1.8rem 1.5rem;
+    }
+
+    .why-icon {
+        width: 56px;
+        height: 56px;
+        font-size: 1.6rem;
+    }
+
+    /* Testimonials */
+    .testimonial-card {
+        text-align: center;
+    }
+
+    .testimonial-text::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .testimonial-card {
+        padding: 1.5rem;
+    }
+
+    .testimonial-text {
+        font-size: 0.9rem;
+        text-align: left;
+    }
+
+    /* Footer */
+    .site-footer {
+        padding: 3rem 0 2rem;
+    }
+
+    .footer-brand {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .footer-logo {
+        margin-bottom: 1rem;
+    }
+
+    .footer-brand p {
+        font-size: 0.9rem;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    /* Footer link columns */
+    .site-footer .row>div:nth-child(2),
+    .site-footer .row>div:nth-child(3) {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .footer-title {
+        font-size: 0.95rem;
+        margin-bottom: 0.8rem;
+        text-align: left;
+        padding-left: 0.75rem;
+    }
+
+    .footer-links {
+        text-align: left;
+        padding-left: 0.75rem;
+    }
+
+    .footer-links li {
+        margin-bottom: 0.4rem;
+    }
+
+    .footer-social {
+        text-align: center;
+        margin-top: 1.5rem;
+    }
+
+    .footer-bottom {
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    /* Gallery page */
+    .gallery-grid {
+        column-count: 1;
+    }
+
+    .gallery-header .container {
+        max-width: 80%;
+    }
+
+    .hero-glass{
+        max-width: 80%;
+    }
+
+    .hero-glass p {
+        font-size: 0.7rem;
+    }
+
+    .smp {
+        padding: 3rem 1.5rem 0 1.5rem;
+    }
+}
+
+
+/* ==================================================
+   VERY SMALL DEVICES (≤ 400px)
+   ================================================== */
+
+@media (max-width: 400px) {
+
+    .hero-content .btn {
+        font-size: 0.85rem;
+        padding: 0.6rem 1.1rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .gallery-grid {
+        column-count: 3;
+    }
+
+    .auth-card {
+        padding: 3.5rem;
+    }
+}
